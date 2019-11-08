@@ -1,0 +1,26 @@
+{
+    "name": "CopyQueue",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "description": "Creates a queue of copies.",
+    "content_scripts": [
+        {
+            "js": ["content.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "index.html",
+        "title": "Copy Queue"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "./assets/pointer.png",
+        "48": "./assets/pointer.png",
+        "128": "./assets/pointer.png"
+    },
+    "permissions": ["contextMenus", "tabs", "storage"],
+    "web_accessible_resources": ["*.html"]
+}
